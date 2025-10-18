@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Joshelin Andrea Portilla Castillo/title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(135deg, #008080, #006666);
+            color: white;
+            padding: 30px 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid rgba(255,255,255,0.3);
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: #666;
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            background-color: #006666;
+            color: white;
+            padding: 10px 15px;
+            margin: 20px 0 10px 0;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info, .external-links {
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .contact-item, .link-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .contact-item i, .link-item i {
+            width: 25px;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .link-item a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .link-item a:hover {
+            color: #e0e0e0;
+            text-decoration: underline;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background-color: white;
+        }
+
+        .section-header {
+            color: #008080;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #008080;
+            padding-bottom: 8px;
+        }
+
+        .bio-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .interests-list {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .interests-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Portfolio Tabs */
+        .tabs {
+            display: flex;
+            background-color: #008080;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 12px 0;
+            background-color: #006666;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab.active {
+            background-color: #008080;
+        }
+
+        .tab:hover:not(.active) {
+            background-color: #007070;
+        }
+
+        .tab-content {
+            background-color: #f8f8f8;
+            border: 1px solid #008080;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            padding: 20px;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .year-section {
+            margin-bottom: 20px;
+        }
+
+        .year-header {
+            background-color: #e8f4f4;
+            color: #006666;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .projects-list {
+            padding-left: 20px;
+        }
+
+        .projects-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar, .main-content {
+                width: 100%;
+            }
+
+            .tabs {
+                flex-wrap: wrap;
+            }
+
+            .tab {
+                flex: none;
+                min-width: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tab {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+      <div class="sidebar">
+    <img src="https://avatars.githubusercontent.com/u/237873867?v=4" alt="Foto de Joshelin Andrea Portilla Castillo" class="profile-photo">
+           <div class="name">Joshelin Andrea Portilla Castillo</div>
+            <div class="section-title">DATOS DE CONTACTO</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>portillaandrea123@gmail.com
+
+                    </span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>098 768 2040</span>
+                </div>
+            </div>
+
+            <div class="section-title">LINKS EXTERNOS</div>
+            <div class="external-links">
+                <div class="link-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/andrea-portilla-3232a5338/">LinkedIn</a>
+                </div>
+                <div class="link-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="https://upecedu-my.sharepoint.com/:b:/g/personal/joshelin_portilla_upec_edu_ec/EaR8GIPXkXZCu8BhZPeWmhkB7UGD6hQkYXyUkDCn1NMq0w?e=itW9dF">Hoja de vida PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Biografía -->
+            <h2 class="section-header">BIOGRAFÍA</h2>
+            <div class="bio-text">
+                <p>Profesional en Logística y Transporte formada en la Universidad Politécnica Estatal del Carchi, con sólidos conocimientos en almacenamiento, distribución de mercancías y transporte. Con conocimiento en la optimización de cadenas de suministro y mejora de la competitividad organizacional mediante el uso de tecnologías avanzadas. </p>
+                <p> Cuento con experiencia en administración enfocada en el transporte. Destacada en la implementación de prácticas orientadas en la calidad del servicio y la innovación, contribuyendo a la creación de valor en las instituciones donde ha colaborado.</p> 
+                <p>  Poseo excelentes habilidades comunicativas, liderazgo, caracterizándose por su compromiso y por el trabajo en equipo.</p>
+        
+            </div>
+
+            <!-- Intereses Profesionales -->
+            <h2 class="section-header">INTERESES PROFESIONALES</h2>
+            <ul class="interests-list">
+                <ul>
+                    <li><i class="fa-solid fa-bus"></i> Gestión de la cadena de suministro</li>
+                    <li><i class="fa-solid fa-truck"></i> Gestión de inventario</li>
+                    <li><i class="fa-solid fa-cogs"></i> Gestión de rutas de transporte</li>
+                    <li><i class="fa-solid fa-vr-cardboard"></i> Gestión de documentación aduanera</li>
+                    <li><i class="fa-solid fa-vr-cardboard"></i> Operaciones multimodales</li>
+                </ul>
+
+            <!-- Portafolio -->
+              <h2 class="section-header">PORTAFOLIO DE PROYECTOS</h2>
+            <div class="tabs">
+                <div class="tab active" onclick="showTab('consultoria')">Publicaciones</div>
+                <div class="tab" onclick="showTab('investigacion')">Proyectos Investigación</div>
+                <div class="tab" onclick="showTab('cursos')">Cursos</div>
+                <div class="tab" onclick="showTab('colaboraciones')">Colaboraciones</div>
+            </div>
+            
+                <div id="consultoria" class="tab-content active">
+                    <div class="year" onclick="toggleYear('pc2026')">2026</div>
+                    <div id="pc2026" class="year-content">
+                        <ul>
+                            <li> (Tesis) Portilla, J. (2026). distribución de insumos médicos y su impacto en la accesibilidad en
+                                los centros de salud en la Provincia del Carchi [Trabajo de Integración Curricular]. Universidad
+                                Politécnica Estatal del Carchi.<a href="#">Link proyecto</a></li>
+                        </ul>
+                    </div>
+                    <div class="year" onclick="toggleYear('pc2024')">2024</div>
+                    <div id="pc2024" class="year-content">
+                        <ul>
+                            <li>Consultoría en almacenamiento/li>
+                            <li>Análisis y mejora en procesos de movilidad urbana</li>
+                            <li>Capacitación en optimización de transporte de carga</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div id="investigacion" class="tab-content">
+                    <div class="year" onclick="toggleYear('pi2024')">2024</div>
+                    <div id="pi2024" class="year-content">
+                        <ul>
+                            <li> Proyecto de vinculación sobre el manual del ciclista y micromovilidad en la ciudad de Tulcán </li>
+
+                        </ul>
+                    </div>
+                    <div class="year" onclick="toggleYear('pi2024')">2024</div>
+                    <div id="pi2024" class="year-content">
+                        <ul>
+                            <li>Proyecto de diseño de rutas para el mejoramiento del servicio de transporte del ciclista, con la Dirección de transporte vehicular denominado Manual del ciclista y micro movilidad en la ciudad de Tulcán Rol desempeñado: Colaboradora.
+                        </ul>
+                    </div>
+                </div>
+            
+                <div id="cursos" class="tab-content">
+                    <div class="year" onclick="toggleYear('c2025')">2025</div>
+                    <div id="c2025" class="year-content">
+                        <ul>
+                            <li>Formación de líderes en Programación y Tecnología: 40 horas. Universidad Politécnica Estatal del Carchi. 17 - septiembre - 2025.</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="year" onclick="toggleYear('c2024')">2024</div>
+                    <div id="c2024" class="year-content">
+                        <ul>
+                            <li>Práctica de llenado de declaraciones aduaneras. Duración: 10 horas. My Intelecto, Ecuador. Noviembre.</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            
+                <div id="colaboraciones" class="tab-content">
+                    <div class="year" onclick="toggleYear('col2025')">2025</div>
+                    <div id="col2025" class="year-content">
+                        <ul>
+                            <li>Colaboración de Levantamiento de Información de Rutas de circulación para los ciclistas en la ciudad de Tulcán
+                                </li>
+
+                        </ul>
+                    </div>
+                    <div class="year" onclick="toggleYear('col2024')">2024</div>
+                    <div id="col2024" class="year-content">
+                        <ul>
+                            <li>Participación como expositora con el Poster del trabajo titulado ”Gestión de la cadena logística en la comercializaron del Café Arábigo desde el Ecuador hacia mercados internacionales”, desarrollado en la Universidad Politécnica Estatal del Carchi, los días 03 y 04 de octubre de 2024. <li>
+                        </ul>
+                    </div>
+                    <div class="year" onclick="toggleYear('col2024')">2024</div>
+                    <div id="col2024" class="year-content">
+                        <ul>
+                            <li> Participación en el ”VIII Congreso Internacional de Ciencias Económicas y Sociales de Innovación y Cultura” Realizado el 29,30 de abril y 1 de mayo de 2025, con una duración de 24 hora académicas. en proyecto de la Universidad Politécnica Estatal del Carchi.</li> 
+                </div>
+            </div>
+    <script>
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
